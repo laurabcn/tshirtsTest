@@ -7,7 +7,7 @@ server:
 ### COMPOSER-INSTALL ###
 .PHONY: composer
 composer:
-	 docker run --rm -it -v $$PWD:/app -w /app -u $$(id -u):$$(id -g) composer require simple-bus/symfony-bridge
+	 docker run --rm -it -v $$PWD:/app -w /app -u $$(id -u):$$(id -g) composer install --ignore-platform-reqs
 
 ### UNIT-TEST ###
 .PHONY: tests
